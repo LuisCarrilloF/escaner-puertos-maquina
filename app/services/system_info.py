@@ -1,9 +1,8 @@
 import platform
 import psutil
+from services.utils import Convertidor_bytes_to_gb
 
 def Get_system_info():
-    def Convertidor_bytes_to_gb(bytes):
-        return round(bytes / (1024 ** 3), 2)
 
     informacion = {
         "Sistema operativo": platform.system(),
