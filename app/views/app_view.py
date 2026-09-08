@@ -18,7 +18,7 @@ class AppView:
 
     def _build_shell(self):
         self.root.title("LCarrillo.Dev - Escaner de diagnostico")
-        self.root.geometry("1200x740")
+        self.root.geometry("1300x740")
         self.root.minsize(900, 600)
         self.root.configure(bg=styles.BACKGROUND)
 
