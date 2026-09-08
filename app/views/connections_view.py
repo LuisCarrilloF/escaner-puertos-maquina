@@ -12,6 +12,6 @@ class ConnectionsView(Tk.Frame):
     def _build(self):
         panel = styles.panel(self)
         panel.pack(fill="both", expand=True)
-        styles.title(panel, "[ CONEXIONES ACTIVAS ]", styles.AMBER, columns=4)
-        rows = get_connections() or [("-", "-", "Sin conexiones", "-")]
-        add_table(panel, ("Estado", "PID", "Local", "Remota"), rows, start_row=1)
+        styles.title(panel, "[ CONEXIONES ACTIVAS ]", styles.AMBER, columns=5)
+        rows = get_connections(collapse_loopback=True) or [("-", "-", "desconocido", "Sin conexiones", "-")]
+        add_table(panel, ("Estado", "PID", "Proceso", "Local", "Remota"), rows, start_row=1)
